@@ -13,8 +13,8 @@ body{
 
 .caixa{
     width:100%;
-    height:90px;
-    background-color: gray;
+    height:10vh;
+    background-color: white;
 
 
     display:flex;
@@ -26,21 +26,22 @@ body{
 /* BLOCO DO LOGO */
 
 .caixote{
-    width:400px;
-    height:90px;
-    background-color: rgb(70,70,70);
+    width:40vh;
+    height:10vh;
+    background-color: white;
     clip-path: polygon(
         0% 0%, 
         80% 0%, 
         65% 100%, 
         0% 100%
     );
+    
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 20px; 
     transition: transform 0.5s ease;
@@ -55,13 +56,26 @@ body{
 
 
 /* TEXTO LOGO */
-
-
 .cerun{
-    color:white;
+    color:#ff751f;
     font-size:28px;
     font-weight:bold;
 }
+/* Icons */
+.logo {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-right: 100px;
+    gap: 20px;
+}
+
+.logo svg {
+    color: #ff751f;
+    width: 22px;
+    height: 22px;
+}
+
 
 
 /* MENU */
@@ -70,7 +84,7 @@ nav{
 }
 
 nav a{
-    color:white;
+    color:#ff751f;
     text-decoration:none;
 
     font-size:16px;
@@ -81,4 +95,49 @@ nav a{
 
     border-radius:5px;
 }
+.espaco-laranja {
+    background-color: #ff751f;
+    min-height: 90vh;
+    width: 100%;
 
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+.espaco-laranja {
+    background: linear-gradient(135deg, #ff7824, #fd6100);
+}
+.CRI {
+    font-size: 56px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+
+.nome1 {
+    transition: transform 0.4s ease;
+}
+.nome1:hover {
+    transform: scale(1.25);
+    filter: brightness(1.1);
+}
+
+.subtitulo {
+    font-size: 22px;
+    opacity: 0.9;
+}
+.details {
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+
+      text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: unsetJ;
+}
