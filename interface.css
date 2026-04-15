@@ -141,3 +141,37 @@ nav a{
     letter-spacing: 5px;
     font-weight: unsetJ;
 }
+
+nav a {
+    color:#ff751f;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:bold;
+    padding:8px 15px;
+    margin:0 5px;
+    border-radius:5px;
+
+    position: relative; /* importante */
+}
+
+/* linha escondida */
+nav a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 0%;
+    height: 3px;
+    background-color: #ff751f;
+
+    transition: width 0.6s ease;
+}
+
+/* animação ao passar o mouse */
+nav a:hover:after {
+    width: 100%;
+    
+}
+
+
