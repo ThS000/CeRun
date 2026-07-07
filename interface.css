@@ -81,6 +81,8 @@ body{
 /* MENU */
 nav{
     margin-right: 500px;
+    display: flex;
+    align-items: center;
 }
 
 nav a{
@@ -174,4 +176,568 @@ nav a:hover:after {
     
 }
 
+/* ==========================================================
+   CTA na home (botão dentro do espaco-laranja)
+   ========================================================== */
 
+.cta-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 36px;
+    background: white;
+    color: #ff751f;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 50px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+}
+
+/* ==========================================================
+   PÁGINAS INTERNAS (Quem Somos / Serviços) - conteúdo genérico
+   ========================================================== */
+
+.pagina-conteudo {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 30px;
+}
+
+.pagina-conteudo h1 {
+    color: #ff751f;
+    font-size: 38px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.pagina-conteudo > p.intro {
+    text-align: center;
+    color: #555;
+    font-size: 17px;
+    max-width: 650px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    border-top: 4px solid #ff751f;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+.info-card .icone {
+    font-size: 30px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.info-card h3 {
+    color: #333;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.equipe-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.equipe-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff7824, #fd6100);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 auto 15px;
+}
+
+/* ==========================================================
+   MODAL DE LOGIN / CADASTRO (abre em cima da Home)
+   ========================================================== */
+
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 15, 10, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 999;
+    padding: 20px;
+    animation: modalFadeIn 0.25s ease;
+}
+
+.modalOverlay.active {
+    display: flex;
+}
+
+.modal-caixa {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    animation: modalPopIn 0.3s ease;
+}
+
+.modalClose {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    color: #ff751f;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+    z-index: 1;
+}
+
+.modalClose:hover {
+    transform: rotate(90deg);
+    background: #ff751f;
+    color: white;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes modalPopIn {
+    from { opacity: 0; transform: translateY(25px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.auth-card {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 40px 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 30px;
+    background: rgb(230,230,230);
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.tab-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 0;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 14px;
+    color: #888;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #ff751f;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255,117,31,0.4);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.auth-form label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 12px;
+}
+
+.auth-form input {
+    padding: 12px 14px;
+    border: 2px solid rgb(225,225,225);
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: border 0.3s ease;
+}
+
+.auth-form input:focus {
+    outline: none;
+    border-color: #ff751f;
+}
+
+.btn-primary {
+    margin-top: 22px;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: #ff751f;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #e2660f;
+    transform: translateY(-2px);
+}
+
+.auth-error {
+    min-height: 18px;
+    color: #e74c3c;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* ==========================================================
+   DASHBOARD
+   ========================================================== */
+
+.dashboard-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 25px 80px;
+}
+
+.dashboard-container h1 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.dashboard-container h1 span {
+    color: #ff751f;
+}
+
+.dash-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #ff751f;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+/* Calculadora rápida */
+
+.calc-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.calc-inputs label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+}
+
+.calc-inputs input {
+    padding: 10px 12px;
+    border: 2px solid rgb(225,225,225);
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.calc-inputs input:focus {
+    outline: none;
+    border-color: #ff751f;
+}
+
+.calc-result {
+    display: flex;
+    gap: 20px;
+    margin-top: 22px;
+}
+
+.result-item {
+    flex: 1;
+    text-align: center;
+    background: rgb(245,245,245);
+    border-radius: 12px;
+    padding: 16px 10px;
+}
+
+.result-item span {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.result-item strong {
+    font-size: 26px;
+    color: #ff751f;
+}
+
+.result-item small {
+    display: block;
+    font-size: 11px;
+    color: #999;
+    margin-top: 2px;
+}
+
+/* Estatísticas */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.stat-box {
+    background: rgb(245,245,245);
+    border-radius: 12px;
+    padding: 16px 10px;
+    text-align: center;
+}
+
+.stat-box strong {
+    display: block;
+    font-size: 24px;
+    color: #ff751f;
+}
+
+.stat-box span {
+    font-size: 12px;
+    color: #888;
+    font-weight: bold;
+}
+
+/* Formulário de registrar corrida */
+
+.run-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 15px;
+    align-items: end;
+}
+
+.run-form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.run-form label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #444;
+}
+
+.run-form input {
+    padding: 10px 12px;
+    border: 2px solid rgb(225,225,225);
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.run-form input:focus {
+    outline: none;
+    border-color: #ff751f;
+}
+
+.run-form .btn-primary {
+    margin-top: 0;
+    height: 42px;
+    white-space: nowrap;
+    padding: 0 20px;
+}
+
+/* Histórico / tabela */
+
+.run-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.run-table th {
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #888;
+    padding: 10px 12px;
+    border-bottom: 2px solid rgb(235,235,235);
+}
+
+.run-table td {
+    padding: 12px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid rgb(240,240,240);
+}
+
+.run-table tr:hover td {
+    background: rgb(250,250,250);
+}
+
+.btn-excluir {
+    border: none;
+    background: rgba(231,76,60,0.1);
+    color: #e74c3c;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.btn-excluir:hover {
+    background: rgba(231,76,60,0.25);
+}
+
+.empty-state {
+    display: none;
+    text-align: center;
+    color: #999;
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+@media (max-width: 720px) {
+    .dash-grid {
+        grid-template-columns: 1fr;
+    }
+    .run-form {
+        grid-template-columns: 1fr;
+    }
+    nav {
+        margin-right: 20px;
+    }
+    .caixote {
+        width: 30vh;
+    }
+}
+
+/* ==========================================================
+   TOAST (feedback), adaptado ao tema laranja
+   ========================================================== */
+
+#toastContainer {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    background: #333;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 3rem;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    max-width: 300px;
+}
+
+.toast-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast-success {
+    border-left: 4px solid #ff751f;
+}
+
+.toast-warning {
+    border-left: 4px solid #f39c12;
+}
+
+.toast-error {
+    border-left: 4px solid #e74c3c;
+}
+
+.toast-exit {
+    opacity: 0;
+    transform: translateX(50px);
+}
