@@ -3,741 +3,573 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-    margin:0;
-    background-color: rgb(230,230,230);
-    font-family: Arial, Helvetica, sans-serif;
+
+body {
+  background-color: rgb(230, 230, 230);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* BARRA SUPERIOR */
+/* ===== BARRA SUPERIOR ===== */
 
-.caixa{
-    width:100%;
-    height:10vh;
-    background-color: white;
-
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+.caixa {
+  width: 100%;
+  height: 10vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
-/* BLOCO DO LOGO */
-
-.caixote{
-    width:40vh;
-    height:10vh;
-    background-color: white;
-    clip-path: polygon(
-        0% 0%, 
-        80% 0%, 
-        65% 100%, 
-        0% 100%
-    );
-    
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    flex-direction: row;
-    align-items: center;
-    padding: 20px; 
-    transition: transform 0.5s ease;
+.caixote {
+  width: 40vh;
+  height: 10vh;
+  background-color: white;
+  clip-path: polygon(0% 0%, 80% 0%, 65% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transform-origin: top left;
+  transition: transform 0.5s ease;
 }
-  .caixote{
-    transform-origin: top left;
-}
-  
+
 .caixote:hover {
-    transform: scale(1.35);
+  transform: scale(1.35);
 }
 
-
-/* TEXTO LOGO */
-.cerun{
-    color:#ff751f;
-    font-size:28px;
-    font-weight:bold;
+.cerun {
+  color: #ff751f;
+  font-size: 28px;
+  font-weight: bold;
 }
-/* Icons */
+
 .logo {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin-right: 100px;
-    gap: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-right: 100px;
+  gap: 20px;
 }
 
 .logo svg {
-    color: #ff751f;
-    width: 22px;
-    height: 22px;
+  color: #ff751f;
+  width: 22px;
+  height: 22px;
 }
 
+/* ===== MENU ===== */
 
-
-/* MENU */
-nav{
-    margin-right: 500px;
-    display: flex;
-    align-items: center;
-}
-
-nav a{
-    color:#ff751f;
-    text-decoration:none;
-
-    font-size:16px;
-    font-weight:bold;
-
-    padding:8px 15px;
-    margin:0 5px;
-
-    border-radius:5px;
-}
-.espaco-laranja {
-    background-color: #ff751f;
-    min-height: 90vh;
-    width: 100%;
-
-    display: flex;
-    align-items: center;      
-    justify-content: center;  
-
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-.espaco-laranja {
-    background: linear-gradient(135deg, #ff7824, #fd6100);
-}
-.CRI {
-    font-size: 56px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-}
-
-
-.nome1 {
-    transition: transform 0.4s ease;
-}
-.nome1:hover {
-    transform: scale(1.25);
-    filter: brightness(1.1);
-}
-
-.subtitulo {
-    font-size: 22px;
-    opacity: 0.9;
-}
-.details {
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-
-      text-transform: uppercase;
-    letter-spacing: 5px;
-    font-weight: unsetJ;
+nav {
+  display: flex;
+  align-items: center;
+  margin-right: 500px;
 }
 
 nav a {
-    color:#ff751f;
-    text-decoration:none;
-    font-size:16px;
-    font-weight:bold;
-    padding:8px 15px;
-    margin:0 5px;
-    border-radius:5px;
-
-    position: relative; /* importante */
+  position: relative;
+  color: #ff751f;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
 }
 
-/* linha escondida */
-nav a:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    width: 0%;
-    height: 3px;
-    background-color: #ff751f;
-
-    transition: width 0.6s ease;
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #ff751f;
+  transition: width 0.6s ease;
 }
 
-/* animação ao passar o mouse */
-nav a:hover:after {
-    width: 100%;
-    
+nav a:hover::after {
+  width: 100%;
 }
 
-/* ==========================================================
-   CTA na home (botão dentro do espaco-laranja)
-   ========================================================== */
+/* ===== HOME (HERO) ===== */
+
+.espaco-laranja {
+  width: 100%;
+  min-height: 90vh;
+  background: linear-gradient(135deg, #ff7824, #fd6100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.nome1 {
+  transition: transform 0.4s ease;
+}
+
+.nome1:hover {
+  transform: scale(1.25);
+  filter: brightness(1.1);
+}
+
+.details {
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.CRI {
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.subtitulo {
+  font-size: 22px;
+  opacity: 0.9;
+}
 
 .cta-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 14px 36px;
-    background: white;
-    color: #ff751f;
-    font-weight: bold;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 50px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 36px;
+  background: white;
+  color: #ff751f;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 50px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cta-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
-/* ==========================================================
-   PÁGINAS INTERNAS (Quem Somos / Serviços) - conteúdo genérico
-   ========================================================== */
+/* ===== PÁGINAS INTERNAS (Quem Somos) ===== */
 
 .pagina-conteudo {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 70px 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 30px;
 }
 
 .pagina-conteudo h1 {
-    color: #ff751f;
-    font-size: 38px;
-    margin-bottom: 15px;
-    text-align: center;
+  color: #ff751f;
+  font-size: 38px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-.pagina-conteudo > p.intro {
-    text-align: center;
-    color: #555;
-    font-size: 17px;
-    max-width: 650px;
-    margin: 0 auto 50px;
-    line-height: 1.6;
+.pagina-conteudo p.intro {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  text-align: center;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 
 .info-card {
-    background: white;
-    border-radius: 16px;
-    padding: 30px 25px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-    border-top: 4px solid #ff751f;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+  border-radius: 16px;
+  border-top: 4px solid #ff751f;
+  padding: 30px 25px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .info-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12);
 }
 
 .info-card .icone {
-    font-size: 30px;
-    margin-bottom: 12px;
-    display: block;
+  display: block;
+  font-size: 30px;
+  margin-bottom: 12px;
 }
 
 .info-card h3 {
-    color: #333;
-    font-size: 19px;
-    margin-bottom: 10px;
+  color: #333;
+  font-size: 19px;
+  margin-bottom: 10px;
 }
 
 .info-card p {
-    color: #666;
-    font-size: 15px;
-    line-height: 1.6;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-.equipe-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.equipe-card {
-    background: white;
-    border-radius: 16px;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-}
-
-.equipe-avatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #ff7824, #fd6100);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 24px;
-    margin: 0 auto 15px;
-}
-
-/* ==========================================================
-   MODAL DE LOGIN / CADASTRO (abre em cima da Home)
-   ========================================================== */
+/* ===== MODAL DE LOGIN / CADASTRO ===== */
 
 .modalOverlay {
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background: rgba(20, 15, 10, 0.55);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    z-index: 999;
-    padding: 20px;
-    animation: modalFadeIn 0.25s ease;
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 15, 10, 0.55);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+  padding: 20px;
+  animation: modalFadeIn 0.25s ease;
 }
 
 .modalOverlay.active {
-    display: flex;
+  display: flex;
 }
 
 .modal-caixa {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    animation: modalPopIn 0.3s ease;
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  animation: modalPopIn 0.3s ease;
 }
 
 .modalClose {
-    position: absolute;
-    top: -16px;
-    right: -16px;
-    width: 34px;
-    height: 34px;
-    border: none;
-    border-radius: 50%;
-    background: white;
-    color: #ff751f;
-    font-weight: bold;
-    font-size: 15px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, background 0.3s ease;
-    z-index: 1;
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #ff751f;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .modalClose:hover {
-    transform: rotate(90deg);
-    background: #ff751f;
-    color: white;
+  transform: rotate(90deg);
+  background: #ff751f;
+  color: white;
 }
 
 @keyframes modalFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes modalPopIn {
-    from { opacity: 0; transform: translateY(25px) scale(0.95); }
-    to { opacity: 1; transform: translateY(0) scale(1); }
+  from { opacity: 0; transform: translateY(25px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
+/* ===== FORMULÁRIO DE LOGIN / CADASTRO ===== */
+
 .auth-card {
-    background: white;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
-    padding: 40px 35px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 40px 35px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
 .auth-tabs {
-    display: flex;
-    margin-bottom: 30px;
-    background: rgb(230,230,230);
-    border-radius: 50px;
-    padding: 5px;
+  display: flex;
+  margin-bottom: 30px;
+  background: rgb(230, 230, 230);
+  border-radius: 50px;
+  padding: 5px;
 }
 
 .tab-btn {
-    flex: 1;
-    border: none;
-    background: transparent;
-    padding: 10px 0;
-    font-family: inherit;
-    font-weight: bold;
-    font-size: 14px;
-    color: #888;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  color: #888;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .tab-btn.active {
-    background: #ff751f;
-    color: white;
-    box-shadow: 0 4px 12px rgba(255,117,31,0.4);
+  background: #ff751f;
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 117, 31, 0.4);
 }
 
 .auth-form {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .auth-form label {
-    font-size: 13px;
-    font-weight: bold;
-    color: #444;
-    margin-top: 12px;
-}
-
-.auth-form input {
-    padding: 12px 14px;
-    border: 2px solid rgb(225,225,225);
-    border-radius: 10px;
-    font-size: 15px;
-    font-family: inherit;
-    transition: border 0.3s ease;
-}
-
-.auth-form input:focus {
-    outline: none;
-    border-color: #ff751f;
-}
-
-.btn-primary {
-    margin-top: 22px;
-    padding: 13px;
-    border: none;
-    border-radius: 10px;
-    background: #ff751f;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-    background: #e2660f;
-    transform: translateY(-2px);
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #444;
 }
 
 .auth-error {
-    min-height: 18px;
-    color: #e74c3c;
-    font-size: 13px;
-    font-weight: bold;
-    margin-top: 10px;
-    text-align: center;
+  min-height: 18px;
+  margin-top: 10px;
+  color: #e74c3c;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
 }
 
-/* ==========================================================
-   DASHBOARD
-   ========================================================== */
+/* ===== CAMPOS DE INPUT (login, calculadora, registro de corrida) ===== */
+
+.auth-form input,
+.calc-inputs input,
+.run-form input {
+  padding: 10px 12px;
+  border: 2px solid rgb(225, 225, 225);
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.auth-form input:focus,
+.calc-inputs input:focus,
+.run-form input:focus {
+  outline: none;
+  border-color: #ff751f;
+}
+
+.btn-primary {
+  margin-top: 22px;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #ff751f;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #e2660f;
+  transform: translateY(-2px);
+}
+
+/* ===== DASHBOARD ===== */
 
 .dashboard-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 50px 25px 80px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 25px 80px;
 }
 
 .dashboard-container h1 {
-    color: #333;
-    font-size: 30px;
-    margin-bottom: 30px;
+  color: #333;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .dashboard-container h1 span {
-    color: #ff751f;
+  color: #ff751f;
 }
 
 .dash-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
 }
 
 .card {
-    background: white;
-    border-radius: 18px;
-    padding: 28px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .card h2 {
-    color: #ff751f;
-    font-size: 19px;
-    margin-bottom: 20px;
+  color: #ff751f;
+  font-size: 19px;
+  margin-bottom: 20px;
 }
 
 /* Calculadora rápida */
 
 .calc-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .calc-inputs label {
-    font-size: 13px;
-    font-weight: bold;
-    color: #444;
-    margin-top: 10px;
-}
-
-.calc-inputs input {
-    padding: 10px 12px;
-    border: 2px solid rgb(225,225,225);
-    border-radius: 10px;
-    font-size: 15px;
-    font-family: inherit;
-}
-
-.calc-inputs input:focus {
-    outline: none;
-    border-color: #ff751f;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #444;
 }
 
 .calc-result {
-    display: flex;
-    gap: 20px;
-    margin-top: 22px;
+  display: flex;
+  gap: 20px;
+  margin-top: 22px;
 }
 
-.result-item {
-    flex: 1;
-    text-align: center;
-    background: rgb(245,245,245);
-    border-radius: 12px;
-    padding: 16px 10px;
+/* Blocos de resultado / estatística (mesmo visual) */
+
+.result-item,
+.stat-box {
+  flex: 1;
+  background: rgb(245, 245, 245);
+  border-radius: 12px;
+  padding: 16px 10px;
+  text-align: center;
 }
 
-.result-item span {
-    display: block;
-    font-size: 12px;
-    color: #888;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 6px;
+.result-item span,
+.stat-box span {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
-.result-item strong {
-    font-size: 26px;
-    color: #ff751f;
+.result-item strong,
+.stat-box strong {
+  display: block;
+  font-size: 24px;
+  color: #ff751f;
 }
 
 .result-item small {
-    display: block;
-    font-size: 11px;
-    color: #999;
-    margin-top: 2px;
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #999;
 }
-
-/* Estatísticas */
 
 .stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.stat-box {
-    background: rgb(245,245,245);
-    border-radius: 12px;
-    padding: 16px 10px;
-    text-align: center;
-}
-
-.stat-box strong {
-    display: block;
-    font-size: 24px;
-    color: #ff751f;
-}
-
-.stat-box span {
-    font-size: 12px;
-    color: #888;
-    font-weight: bold;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
 /* Formulário de registrar corrida */
 
 .run-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr auto;
-    gap: 15px;
-    align-items: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  align-items: end;
+  gap: 15px;
 }
 
 .run-form div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .run-form label {
-    font-size: 13px;
-    font-weight: bold;
-    color: #444;
-}
-
-.run-form input {
-    padding: 10px 12px;
-    border: 2px solid rgb(225,225,225);
-    border-radius: 10px;
-    font-size: 15px;
-    font-family: inherit;
-}
-
-.run-form input:focus {
-    outline: none;
-    border-color: #ff751f;
+  font-size: 13px;
+  font-weight: bold;
+  color: #444;
 }
 
 .run-form .btn-primary {
-    margin-top: 0;
-    height: 42px;
-    white-space: nowrap;
-    padding: 0 20px;
+  margin-top: 0;
+  height: 42px;
+  padding: 0 20px;
+  white-space: nowrap;
 }
 
 /* Histórico / tabela */
 
 .run-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
 
 .run-table th {
-    text-align: left;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: #888;
-    padding: 10px 12px;
-    border-bottom: 2px solid rgb(235,235,235);
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #888;
+  padding: 10px 12px;
+  border-bottom: 2px solid rgb(235, 235, 235);
 }
 
 .run-table td {
-    padding: 12px;
-    font-size: 14px;
-    color: #333;
-    border-bottom: 1px solid rgb(240,240,240);
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid rgb(240, 240, 240);
 }
 
 .run-table tr:hover td {
-    background: rgb(250,250,250);
+  background: rgb(250, 250, 250);
 }
 
 .btn-excluir {
-    border: none;
-    background: rgba(231,76,60,0.1);
-    color: #e74c3c;
-    width: 26px;
-    height: 26px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.2s ease;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .btn-excluir:hover {
-    background: rgba(231,76,60,0.25);
+  background: rgba(231, 76, 60, 0.25);
 }
 
 .empty-state {
-    display: none;
-    text-align: center;
-    color: #999;
-    padding: 30px 0;
-    font-size: 14px;
+  display: none;
+  text-align: center;
+  color: #999;
+  padding: 30px 0;
+  font-size: 14px;
 }
+
+/* ===== RESPONSIVO ===== */
 
 @media (max-width: 720px) {
-    .dash-grid {
-        grid-template-columns: 1fr;
-    }
-    .run-form {
-        grid-template-columns: 1fr;
-    }
-    nav {
-        margin-right: 20px;
-    }
-    .caixote {
-        width: 30vh;
-    }
-}
-
-/* ==========================================================
-   TOAST (feedback), adaptado ao tema laranja
-   ========================================================== */
-
-#toastContainer {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.toast {
-    background: #333;
-    color: #fff;
-    padding: 14px 22px;
-    border-radius: 3rem;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
-    font-size: 14px;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease;
-    max-width: 300px;
-}
-
-.toast-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.toast-success {
-    border-left: 4px solid #ff751f;
-}
-
-.toast-warning {
-    border-left: 4px solid #f39c12;
-}
-
-.toast-error {
-    border-left: 4px solid #e74c3c;
-}
-
-.toast-exit {
-    opacity: 0;
-    transform: translateX(50px);
+  nav {
+    margin-right: 20px;
+  }
+  .caixote {
+    width: 30vh;
+  }
+  .dash-grid,
+  .run-form {
+    grid-template-columns: 1fr;
+  }
 }
